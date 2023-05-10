@@ -11,9 +11,18 @@ function soloNumeros(array) {
   // soloNumeros([1, 'Henry', 2]) debe retornar [1, 2]
 
   // Tu código aca:
-
+nuevoArreglo = [];
+for (let index = 0; index < array.length; index++) {
+  if ( typeof(array[index]) === "number"){
+    nuevoArreglo.push(array[index])
+    }
+   }
+  return nuevoArreglo
 }
 
+/* console.log(typeof(1))
+console.log(soloNumeros([1,"tt",3]))
+ */
 // No modifiques nada debajo de esta linea //
 
 
