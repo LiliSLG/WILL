@@ -15,7 +15,6 @@ function crearClasePersona() {
       this.edad= edad;
       this.hobbies= hobbies;
       this.amigos= amigos;
-
     }
 
     addFriend(nombre, edad) {
@@ -24,8 +23,11 @@ function crearClasePersona() {
       // No debe retornar nada.
 
       // Tu código aca:
-      let amigo = {nombre, edad}
-      this.amigos.push(amigo);
+      //let amigo = {nombre, edad};
+      //this.amigos.push(amigo);
+      this.amigos =[];//OJO CARGA UN SOLO AMIGO
+      this.amigos.push({nombre: nombre, edad : edad});      
+      //this.amigos.push({ nombre, edad });
     }
 
     addHobby(hobby) {
@@ -46,6 +48,14 @@ function crearClasePersona() {
       const transformarObjetoAmigoANombre = ((amigo) => amigo.nombre);
       const indexed = this.amigos.map(transformarObjetoAmigoANombre);
       return indexed
+
+ /*   let friends = [];
+      for ( let i = 0; i < this.amigos.length; i++) {
+          friends.push(this.amigos[i].nombre);
+      }
+      return friends;
+ */
+
     }
 
     getHobbies() {
@@ -74,12 +84,25 @@ function crearClasePersona() {
 
       // Tu código aca:
       return this.amigos.map(amigo => amigo.edad).reduce((a, b) => a + b) / this.amigos.length
+
+/*       let promedioEdad = 0;
+      for( let i = 0; i < this.amigos.length; i++ ) {
+          promedioEdad += this.amigos[i].edad;
+      }
+      return promedioEdad / this.amigos.length;
+ */
     }
   };
 
   return Persona;
 }
 
+/* var persona = crearClasePersona();
+var nuevaPersona = new persona("jose",32);
+nuevaPersona.addFriend("Carlos",46);
+nuevaPersona.addFriend("pepe",06);
+console.log(nuevaPersona);
+ */
 // No modifiques nada debajo de esta linea //
 
 module.exports = crearClasePersona
