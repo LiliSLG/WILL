@@ -14,7 +14,20 @@ function numeroSimetrico(num) {
 
   // Tu código:
 
+/*   var numeroStr = num.toString();
+  var esCapicua = true;
+  for (let index = 0; index < numeroStr.length; index++) {
+     if(numeroStr[index] !== numeroStr[numeroStr.length -1 - index]){
+        esCapicua = false
+     };   
+  }
+  return esCapicua
+ */
+  return ""+num === (""+num).split("").reverse().join("")
+  //return num.toString() === (num.toString()).split("").reverse().join("")
 }
+
+//console.log(numeroSimetrico(131))
 
 // No modifiques nada debajo de esta linea //
 
