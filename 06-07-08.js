@@ -25,7 +25,7 @@ function crearClasePersona() {
       // Tu código aca:
       //let amigo = {nombre, edad};
       //this.amigos.push(amigo);
-      this.amigos =[];//OJO CARGA UN SOLO AMIGO
+      //this.amigos =[];//OJO CARGA UN SOLO AMIGO
       this.amigos.push({nombre: nombre, edad : edad});      
       //this.amigos.push({ nombre, edad });
     }
