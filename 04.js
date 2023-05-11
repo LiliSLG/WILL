@@ -23,11 +23,21 @@ function numeroSimetrico(num) {
   }
   return esCapicua
  */
-  return ""+num === (""+num).split("").reverse().join("")
+
+var numString = num.toString();
+var longitud = numString.length;
+for (let index = 0; index < Math.floor(longitud/2); index++) {
+  if(numString[index] !== numString[longitud - 1 - index]){
+    return false
+  } 
+}
+return true
+
+  //return ""+num === (""+num).split("").reverse().join("")
   //return num.toString() === (num.toString()).split("").reverse().join("")
 }
 
-//console.log(numeroSimetrico(131))
+//console.log(numeroSimetrico(1331))
 
 // No modifiques nada debajo de esta linea //
 
