@@ -22,14 +22,13 @@ function buscarAmigo(amigos, nombre) {
         };   
   }
   return amigoBuscado   
-  
- 
+   
  // let busqueda = amigos.find(amigo => amigo.nombre === nombre);
  // return busqueda;
 }
 
 
-//console.log(buscarAmigo({nombre: 'toni', edad: 33 } ,{nombre: 'Emi', edad: 25}, 'toni') );
+console.log(buscarAmigo({nombre: 'toni', edad: 33 } ,{nombre: 'Emi', edad: 25}, 'toni') );
 
 // No modifiques nada debajo de esta linea //
 
